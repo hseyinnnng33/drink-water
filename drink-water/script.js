@@ -65,3 +65,25 @@ function bardakDoldur(){
         kacLitreSpan.innerHTML = `${2 - (250 * doluBardaklar / 1000)}L`;
     }
 }
+
+function ozet(){
+    console.log(`
+    Her bir bardağa tıklandığında secilibardaklar fonksiyonu tetikleniyor ve seçilen bardağın indeksini alıyor.
+
+    secilibardaklar fonksiyonu, seçilen bardağın durumunu güncellemek ve bardaklara uygun CSS 
+    sınıflarını eklemek veya kaldırmak için kullanılıyor. İlk olarak, seçilen bardağın durumuna bağlı olarak indeksi 
+    güncelleniyor. Eğer seçilen bardak son bardak (indeks 7) ve dolu ise, indeks bir azaltılarak bir önceki bardağa geçiliyor. 
+    Aynı şekilde, seçilen bardak dolu ise ve bir sonraki bardak dolu değilse, indeks bir azaltılarak bir önceki bardağa geçiliyor.
+    
+    Daha sonra, tüm bardaklar üzerinde dönen bir döngü ile bardaklara CSS sınıfları ekleniyor veya kaldırılıyor. 
+    İndeks değerine göre, seçilen bardaktan önceki bardaklar "full" sınıfıyla işaretleniyor ve görünümü dolu olarak güncelleniyor. 
+    Seçilen bardağın sonrasındaki bardaklar ise "full" sınıfından arındırılıyor ve görünümü dolu olmayan şekilde güncelleniyor.
+    
+    update fonksiyonu, bardaklardaki doluluk durumunu güncellemek için kullanılıyor. 
+    Bu fonksiyon, dolu bardakların sayısını ve toplam bardak sayısını hesaplıyor. Ardından, 
+    bu bilgilere göre su miktarı ve kalan miktarın görünürlüğünü ve boyutunu ayarlıyor. 
+    Eğer hiçbir bardak dolu değilse, su miktarı bölgesi gizleniyor. 
+    Eğer tüm bardaklar dolu ise, kalan miktar bölgesi gizleniyor. 
+    Dolu bardaklar varsa, su miktarı ve kalan miktarın boyutu ve içeriği güncelleniyor.
+    `)
+}
